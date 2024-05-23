@@ -1,54 +1,91 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
-    border-bottom: 1px solid #eaeaea;
-  }
-  
-  .navbar-brand {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  position: relative;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 24px;
+}
+
+.navbar-toggle-icon {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  display: block;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+.navbar-close {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
   .navbar-toggle {
-    display: none;
-    cursor: pointer;
+    display:flex;
   }
-  
-  .navbar-toggle-icon {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    display: block;
-    margin: 5px 0;
-  }
-  
+
   .navbar-menu {
     display: flex;
-    gap: 20px;
+    flex-direction:column;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+    background-color: #f06565;
+    position:fixed;
+    top: 0;
+    left: -529px;
+    width: 92%;
+    height:100%;
+    transition: left 0.3s ease-in-out;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    z-index: 99;
   }
-  
+
+  .navbar-menu.is-active {
+    left: 0;
+  }
+
   .navbar-menu a {
-    text-decoration: none;
+    padding: 10px 0;
     color: #333;
-    font-size: 18px;
+    text-decoration: none;
+    font-size: 20px;
   }
-  
-  @media (max-width: 768px) {
-    .navbar-toggle {
-      display: block;
-    }
-  
-    .navbar-menu {
-      display: none;
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .navbar-menu.is-active {
-      display: flex;
-    }
+
+  .navbar-close {
+    display: block;
+    font-size: 50px;
+    line-height: 50px;
+    width:57px;
   }
-  
+}
