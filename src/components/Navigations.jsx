@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../styles/navbar.css'; 
 
 
+
 const Navigations = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -22,6 +23,7 @@ const Navigations = () => {
             <span className="navbar-close" onClick={toggleMenu}>&times;</span>
               <a href="#home" onClick={toggleMenu}>Home</a>
               <a href="#about" onClick={toggleMenu}>About</a>
+              
               <a href="#projects" onClick={toggleMenu}>Projects</a>
               <a href="#contact" onClick={toggleMenu}>Contact</a>
               </div>
