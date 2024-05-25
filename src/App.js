@@ -2,6 +2,7 @@ import './App.css';
 import Hero from './components/Hero';
 import Navigations from './components/Navigations';
 import AboutMe from './components/AboutMe';
+import CarRental from './project/CarRental';
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
      <Navigations/>
      <Hero/>
      <AboutMe/>
+     <CarRental/>
      </>
   )
 };
