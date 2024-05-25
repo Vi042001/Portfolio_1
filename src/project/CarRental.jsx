@@ -10,7 +10,7 @@ const CarRental = () => {
          </div>
          <div className="content">
       <div className="image-container">
-        <img src="car-image.png" alt="Car Rental" className="car-image" />
+        <img src={"projectImg/car.png"} alt="Car Rental" className="car-image" />
       </div>
       <div className="text-container">
         <h2>CAR RENTAL 🚗</h2>

@@ -8,8 +8,8 @@
 
   
 .project-name {
-    margin-bottom: 20px;
-    text-align: center;
+    margin-bottom:100px;
+   text-align: center;
   }
   
   .project-name h1 {
@@ -20,6 +20,7 @@
   
   .content {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     width: 100%;
@@ -28,8 +29,13 @@
 
   
   .image-container {
+    flex: 1;
+    width: 100%;
+    max-width: 500px;
+    height:auto;
     animation: slide-up 1s ease-out forwards;
-  }
+    overflow: hidden;  
+}
   
   @keyframes slide-up {
     from {
@@ -49,10 +55,12 @@
   
   .text-container {
     max-width: 50%;
+    
   }
   
   .text-container h2 {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    text-align: center;
   }
   
   .text-container p {
