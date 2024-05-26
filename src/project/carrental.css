@@ -1,121 +1,160 @@
-/* src/CarRental.css */
 .portfolio-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.project-name {
+  margin-bottom: 50px;
+  text-align: center;
+  color:  #0d6efd;
+}
+
+.project-name h1 {
+  font-size:30px;
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.image-container {
+  flex: 1;
+  width: 100%;
+  max-width: 580px;
+  overflow:hidden;
+
+}
+.image-container img{
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s;
+
+ 
+}
+
+.image-container img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.car-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-container {
+  flex: 1;
+  max-width: 50%;
+  padding-left: 20px;
+}
+
+.text-container h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.text-container p {
+  margin-bottom: 10px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.links a {
+  margin: 5px;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.links a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .project-name h1 {
+    font-size: 30px;
   }
 
-  
-.project-name {
-    margin-bottom:100px;
-   text-align: center;
+  .content {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .project-name h1 {
-    font-size: 2em;
-    margin-right:0;
+
+  .text-container {
+    max-width: 100%;
+    padding-left: 0;
+    margin-top: 20px;
     text-align: center;
   }
-  
-  .content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
+
+  .links a {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-name h1 {
+    font: size 30px;
+    
   }
 
-  
   .image-container {
     flex: 1;
     width: 100%;
-    max-width: 500px;
-    height:auto;
-    animation: slide-up 1s ease-out forwards;
-    overflow: hidden;  
-}
-  
-  @keyframes slide-up {
-    from {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  .car-image {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .text-container {
-    max-width: 50%;
+    max-width: 580px;
     
+    overflow:hidden;
+   
+  }
+  .image-container img{
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  
+   
   }
   
+  .image-container img:hover {
+    transform: scale(1.05);
+  }
+
+
+  .text-container p,
   .text-container h2 {
-    margin-bottom: 30px;
-    text-align: center;
+    font-size: 0.9em;
   }
-  
-  .text-container p {
-    margin-bottom: 10px;
-  }
-  
+
   .links a {
-    margin-right: 10px;
-    text-decoration: none;
-    color: #000;
-    border: 1px solid #000;
-    padding: 5px 10px;
-    border-radius: 5px;
+    font-size: 0.8em;
+    padding: 5px;
   }
-  
-  .links a:hover {
-    background-color: #000;
-    color: #fff;
-  }
-  
-  /* Media queries for responsiveness */
-@media (max-width: 768px) {
-    .project-name h1 {
-      font-size: 1.5em;
-    }
-  
-    .content {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .text-container {
-      padding-left: 0;
-      margin-top: 20px;
-      text-align: center;
-    }
-  
-    .links a {
-      display: block;
-      margin-bottom: 10px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .project-name h1 {
-      font-size: 1.2em;
-    }
-  
-    .text-container p,
-    .text-container h2 {
-      font-size: 0.9em;
-    }
-  
-    .links a {
-      font-size: 0.8em;
-      padding: 5px;
-    }
-  }
+}

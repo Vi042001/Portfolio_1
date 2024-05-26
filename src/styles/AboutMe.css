@@ -48,7 +48,11 @@ body, html {
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
    
+   
 }
+
+
+
 
 .about-text {
     text-align: center;
@@ -60,6 +64,7 @@ body, html {
     margin-bottom:10px;
     font-size: 30px;
     margin-top: 30px;
+    
 }
 
 .about-text h2 {

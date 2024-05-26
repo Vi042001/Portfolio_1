@@ -7,6 +7,7 @@ const CarRental = () => {
     <div className="portfolio-section">
          <div className="project-name">
          <h1>Project</h1>
+         <p> Each Project is a unique piece of development</p>
          </div>
          <div className="content">
       <div className="image-container">
